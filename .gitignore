@@ -151,3 +151,28 @@ checklink/cookies.txt
 
 # Quarto
 .quarto
+
+# Local artifacts
+# Trained models stay local; the small result tables the scripts read are kept.
+/trained_models/*
+!/trained_models/table7_grid/
+/trained_models/table7_grid/*
+!/trained_models/table7_grid/*.csv
+!/trained_models/table7_refs/
+/trained_models/table7_refs/*
+!/trained_models/table7_refs/*.csv
+!/trained_models/immutability_experiment/
+/trained_models/immutability_experiment/*
+!/trained_models/immutability_experiment/*.csv
+!/trained_models/immutability_experiment/cred/
+/trained_models/immutability_experiment/cred/*
+!/trained_models/immutability_experiment/cred/*.csv
+!/trained_models/immutability_experiment/oulad/
+/trained_models/immutability_experiment/oulad/*
+!/trained_models/immutability_experiment/oulad/*.csv
+# The thesis and the scripts that build it stay local.
+/writing/
+/output/
+# HTML reports stay local.
+/*.html
+/benchmarks/built-in/assets/results.csv

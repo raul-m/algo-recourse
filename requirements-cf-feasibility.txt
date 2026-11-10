@@ -1,0 +1,3 @@
+# Isolated PyTorch environment; export data with the existing ReLax .venv.
+torch==2.8.0
+numpy==2.2.6

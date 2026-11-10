@@ -1,0 +1,702 @@
+{
+ "adult": {
+  "proximity_split": {
+   "unconstrained": {
+    "total": 6.930724143981934,
+    "continuous": 0.924582302570343,
+    "categorical": 6.006141662597656,
+    "switches_per_person": 3.003070875813782
+   },
+   "baseline": {
+    "total": 5.2521209716796875,
+    "continuous": 1.0919439792633057,
+    "categorical": 4.160176753997803,
+    "switches_per_person": 2.080088441223437
+   },
+   "reg_a": {
+    "total": 4.794973373413086,
+    "continuous": 1.1511950492858887,
+    "categorical": 3.6437783241271973,
+    "switches_per_person": 1.8218892028006388
+   },
+   "reg_b": {
+    "total": 4.833409786224365,
+    "continuous": 0.696080207824707,
+    "categorical": 4.137329578399658,
+    "switches_per_person": 2.0686647831961675
+   },
+   "ct_arm_c": {
+    "total": 0.9879270397046455,
+    "continuous": 0.9519609421736295,
+    "categorical": 0.035966097531015845,
+    "switches_per_person": 0.017983048765507922
+   },
+   "model_approx": {
+    "total": 5.69818115234375,
+    "continuous": 0.27130526304244995,
+    "categorical": 5.426876068115234,
+    "switches_per_person": 2.7134381525611104
+   }
+  },
+  "recourse_split": {
+   "unconstrained": {
+    "total": 7.573578834533691,
+    "continuous": 0.9474323987960815,
+    "categorical": 6.62614631652832,
+    "switches_per_person": 3.31307321622882
+   },
+   "baseline": {
+    "total": 5.441734790802002,
+    "continuous": 1.2334965467453003,
+    "categorical": 4.208238124847412,
+    "switches_per_person": 2.1041191670466635
+   },
+   "reg_a": {
+    "total": 4.995617389678955,
+    "continuous": 1.2939391136169434,
+    "categorical": 3.70167875289917,
+    "switches_per_person": 1.8508393997920072
+   },
+   "reg_b": {
+    "total": 4.9338178634643555,
+    "continuous": 0.7513607740402222,
+    "categorical": 4.182457447052002,
+    "switches_per_person": 2.0912286063569683
+   },
+   "ct_arm_c": {
+    "total": 1.0211432180575095,
+    "continuous": 0.9998017546428752,
+    "categorical": 0.021341463414634144,
+    "switches_per_person": 0.010670731707317072
+   },
+   "model_approx": {
+    "total": 5.365630626678467,
+    "continuous": 0.2537914216518402,
+    "categorical": 5.1118388175964355,
+    "switches_per_person": 2.5559193656554497
+   }
+  },
+  "switch_rates": {
+   "baseline": {
+    "workclass": 0.32317897064242723,
+    "education": 0.990050362363346,
+    "marital_status": 0.0,
+    "occupation": 0.7668591082176637,
+    "race": 0.0,
+    "gender": 0.0
+   },
+   "reg_a": {
+    "workclass": 0.08008844122343692,
+    "education": 0.9922613929492692,
+    "marital_status": 0.0,
+    "occupation": 0.7495393686279327,
+    "race": 0.0,
+    "gender": 0.0
+   },
+   "reg_b": {
+    "workclass": 0.3075789215084142,
+    "education": 0.9986488146419359,
+    "marital_status": 0.0,
+    "occupation": 0.7624370470458175,
+    "race": 0.0,
+    "gender": 0.0
+   }
+  },
+  "recourse_switch_rates": {
+   "baseline": {
+    "workclass": 0.3049095607235142,
+    "education": 0.9981760145918832,
+    "marital_status": 0.0,
+    "occupation": 0.8010335917312662,
+    "race": 0.0,
+    "gender": 0.0
+   },
+   "reg_a": {
+    "workclass": 0.07695736146189273,
+    "education": 0.9961372752934186,
+    "marital_status": 0.0,
+    "occupation": 0.7777447630366959,
+    "race": 0.0,
+    "gender": 0.0
+   },
+   "reg_b": {
+    "workclass": 0.2868276283618582,
+    "education": 0.9983190709046454,
+    "marital_status": 0.0,
+    "occupation": 0.8060819070904646,
+    "race": 0.0,
+    "gender": 0.0
+   }
+  },
+  "sensitivity": {
+   "baseline": {
+    "age": 0.3718297481536865,
+    "hours_per_week": 0.39040032029151917,
+    "workclass": 0.23980197310447693,
+    "education": 1.0237340927124023,
+    "marital_status": 0.41889286041259766,
+    "occupation": 0.3879202902317047,
+    "race": 0.10579129308462143,
+    "gender": 0.09644630551338196
+   },
+   "reg_b": {
+    "age": 0.37462118268013,
+    "hours_per_week": 0.3346973955631256,
+    "workclass": 0.3019856810569763,
+    "education": 0.8493272662162781,
+    "marital_status": 0.18740211427211761,
+    "occupation": 0.42666515707969666,
+    "race": 0.025226932018995285,
+    "gender": 0.03873620182275772
+   }
+  },
+  "models": {
+   "unconstrained": "trained_models/table7_refs/adult/actionability_l4_0.0/params.pkl",
+   "baseline": "trained_models/table7_grid/adult/feasibility_baseline/params.pkl",
+   "reg_a": "trained_models/table7_grid/adult/actionability_recourse_predprox_l4_0.5/params.pkl",
+   "reg_b": "trained_models/table7_grid/adult/actionability_recourse_gradpen_every_k_20_l4_5.0/params.pkl"
+  },
+  "sensitivity_sq": {
+   "baseline": {
+    "age": 1.1867917776107788,
+    "hours_per_week": 0.6301413178443909,
+    "workclass": 0.08305714279413223,
+    "education": 0.7956713438034058,
+    "marital_status": 0.1667870432138443,
+    "occupation": 0.17209145426750183,
+    "race": 0.03324536606669426,
+    "gender": 0.020277492702007294
+   },
+   "reg_b": {
+    "age": 0.5410774946212769,
+    "hours_per_week": 0.23577068746089935,
+    "workclass": 0.057801973074674606,
+    "education": 0.25162744522094727,
+    "marital_status": 0.022380394861102104,
+    "occupation": 0.07796306163072586,
+    "race": 0.0008744880906306207,
+    "gender": 0.00204728776589036
+   }
+  },
+  "immutable": [
+   "race",
+   "gender",
+   "marital_status"
+  ]
+ },
+ "credit": {
+  "proximity_split": {
+   "unconstrained": {
+    "total": 4.541604995727539,
+    "continuous": 1.9474716186523438,
+    "categorical": 2.5941333770751953,
+    "switches_per_person": 1.2970666666666666
+   },
+   "baseline": {
+    "total": 2.6342291831970215,
+    "continuous": 1.6112960577011108,
+    "categorical": 1.0229333639144897,
+    "switches_per_person": 0.5114666666666666
+   },
+   "reg_a": {
+    "total": 1.9028117656707764,
+    "continuous": 1.8689450025558472,
+    "categorical": 0.03386666625738144,
+    "switches_per_person": 0.016933333333333335
+   },
+   "reg_b": {
+    "total": 2.521604537963867,
+    "continuous": 1.6258708238601685,
+    "categorical": 0.8957333564758301,
+    "switches_per_person": 0.4478666666666667
+   },
+   "ct_arm_c": {
+    "total": 3.9064964983606485,
+    "continuous": 3.906069831693982,
+    "categorical": 0.00042666666666666667,
+    "switches_per_person": 0.00021333333333333333
+   },
+   "model_approx": {
+    "total": 4.303138256072998,
+    "continuous": 1.1188716888427734,
+    "categorical": 3.1842665672302246,
+    "switches_per_person": 1.5921333333333334
+   }
+  },
+  "recourse_split": {
+   "unconstrained": {
+    "total": 4.687122821807861,
+    "continuous": 1.8550697565078735,
+    "categorical": 2.832052707672119,
+    "switches_per_person": 1.41602634467618
+   },
+   "baseline": {
+    "total": 2.6911675930023193,
+    "continuous": 1.7758405208587646,
+    "categorical": 0.9153268933296204,
+    "switches_per_person": 0.45766345123258306
+   },
+   "reg_a": {
+    "total": 2.0243265628814697,
+    "continuous": 2.019801616668701,
+    "categorical": 0.004524887073785067,
+    "switches_per_person": 0.0022624434389140274
+   },
+   "reg_b": {
+    "total": 2.6650631427764893,
+    "continuous": 1.7821063995361328,
+    "categorical": 0.882956862449646,
+    "switches_per_person": 0.4414784394250513
+   },
+   "ct_arm_c": {
+    "total": 3.906178187127851,
+    "continuous": 3.906178187127851,
+    "categorical": 0.0,
+    "switches_per_person": 0.0
+   },
+   "model_approx": {
+    "total": 5.424496173858643,
+    "continuous": 1.3862515687942505,
+    "categorical": 4.038244724273682,
+    "switches_per_person": 2.019122442929143
+   }
+  },
+  "switch_rates": {
+   "baseline": {
+    "SEX": 0.0,
+    "EDUCATION": 0.5114666666666666,
+    "MARRIAGE": 0.0
+   },
+   "reg_a": {
+    "SEX": 0.0,
+    "EDUCATION": 0.016933333333333335,
+    "MARRIAGE": 0.0
+   },
+   "reg_b": {
+    "SEX": 0.0,
+    "EDUCATION": 0.4478666666666667,
+    "MARRIAGE": 0.0
+   }
+  },
+  "recourse_switch_rates": {
+   "baseline": {
+    "SEX": 0.0,
+    "EDUCATION": 0.45766345123258306,
+    "MARRIAGE": 0.0
+   },
+   "reg_a": {
+    "SEX": 0.0,
+    "EDUCATION": 0.0022624434389140274,
+    "MARRIAGE": 0.0
+   },
+   "reg_b": {
+    "SEX": 0.0,
+    "EDUCATION": 0.4414784394250513,
+    "MARRIAGE": 0.0
+   }
+  },
+  "sensitivity": {
+   "baseline": {
+    "LIMIT_BAL": 0.23994635045528412,
+    "AGE": 0.057527460157871246,
+    "PAY_0": 0.6590456962585449,
+    "PAY_2": 0.13682851195335388,
+    "PAY_3": 0.13091836869716644,
+    "PAY_4": 0.11730478703975677,
+    "PAY_5": 0.09105829894542694,
+    "PAY_6": 0.15414589643478394,
+    "BILL_AMT1": 0.12032187730073929,
+    "BILL_AMT2": 0.23415526747703552,
+    "BILL_AMT3": 0.11166215687990189,
+    "BILL_AMT4": 0.10077071934938431,
+    "BILL_AMT5": 0.11593905091285706,
+    "BILL_AMT6": 0.03026428632438183,
+    "PAY_AMT1": 1.3171427249908447,
+    "PAY_AMT2": 1.4146442413330078,
+    "PAY_AMT3": 0.7801892161369324,
+    "PAY_AMT4": 0.4485626220703125,
+    "PAY_AMT5": 0.4977383017539978,
+    "PAY_AMT6": 0.6370976567268372,
+    "SEX": 0.19095034897327423,
+    "EDUCATION": 1.2169835567474365,
+    "MARRIAGE": 0.6595541834831238
+   },
+   "reg_b": {
+    "LIMIT_BAL": 0.21546827256679535,
+    "AGE": 0.08944287151098251,
+    "PAY_0": 0.6273654699325562,
+    "PAY_2": 0.15484599769115448,
+    "PAY_3": 0.1187710389494896,
+    "PAY_4": 0.12801924347877502,
+    "PAY_5": 0.1026928722858429,
+    "PAY_6": 0.19053329527378082,
+    "BILL_AMT1": 0.12459714710712433,
+    "BILL_AMT2": 0.24029883742332458,
+    "BILL_AMT3": 0.1205795407295227,
+    "BILL_AMT4": 0.08752139657735825,
+    "BILL_AMT5": 0.12869906425476074,
+    "BILL_AMT6": 0.03576196730136871,
+    "PAY_AMT1": 1.5327410697937012,
+    "PAY_AMT2": 1.503568172454834,
+    "PAY_AMT3": 0.9548588395118713,
+    "PAY_AMT4": 0.5427728891372681,
+    "PAY_AMT5": 0.4853459894657135,
+    "PAY_AMT6": 0.6598387360572815,
+    "SEX": 0.196494922041893,
+    "EDUCATION": 1.3310449123382568,
+    "MARRIAGE": 0.3915550708770752
+   }
+  },
+  "models": {
+   "unconstrained": "trained_models/table7_refs/credit/credit_base/params.pkl",
+   "baseline": "trained_models/table7_grid/credit/feasibility_baseline/params.pkl",
+   "reg_a": "trained_models/table7_grid/credit/cred_predprox_l4_0.1/params.pkl",
+   "reg_b": "trained_models/table7_grid/credit/cred_gradfinetune_everyk50_l4_0.1_20ep/params.pkl"
+  },
+  "sensitivity_sq": {
+   "baseline": {
+    "LIMIT_BAL": 0.17525586485862732,
+    "AGE": 0.012280517257750034,
+    "PAY_0": 1.6976237297058105,
+    "PAY_2": 0.07480446994304657,
+    "PAY_3": 0.0627170279622078,
+    "PAY_4": 0.04703414812684059,
+    "PAY_5": 0.03421187400817871,
+    "PAY_6": 0.07722634822130203,
+    "BILL_AMT1": 0.06246860325336456,
+    "BILL_AMT2": 0.17918527126312256,
+    "BILL_AMT3": 0.04425051435828209,
+    "BILL_AMT4": 0.037742163985967636,
+    "BILL_AMT5": 0.0433269701898098,
+    "BILL_AMT6": 0.0033876856323331594,
+    "PAY_AMT1": 4.672874927520752,
+    "PAY_AMT2": 5.038032054901123,
+    "PAY_AMT3": 1.7996052503585815,
+    "PAY_AMT4": 0.6946589350700378,
+    "PAY_AMT5": 0.7104283571243286,
+    "PAY_AMT6": 1.0007250308990479,
+    "SEX": 0.0516083650290966,
+    "EDUCATION": 1.0394668579101562,
+    "MARRIAGE": 0.7792856693267822
+   },
+   "reg_b": {
+    "LIMIT_BAL": 0.10716429352760315,
+    "AGE": 0.022626196965575218,
+    "PAY_0": 2.544322967529297,
+    "PAY_2": 0.087474524974823,
+    "PAY_3": 0.049216046929359436,
+    "PAY_4": 0.058707281947135925,
+    "PAY_5": 0.039357081055641174,
+    "PAY_6": 0.11660178750753403,
+    "BILL_AMT1": 0.05942406505346298,
+    "BILL_AMT2": 0.20434606075286865,
+    "BILL_AMT3": 0.04896949604153633,
+    "BILL_AMT4": 0.033284641802310944,
+    "BILL_AMT5": 0.04808594658970833,
+    "BILL_AMT6": 0.005770728457719088,
+    "PAY_AMT1": 5.882116794586182,
+    "PAY_AMT2": 5.316971778869629,
+    "PAY_AMT3": 2.7883336544036865,
+    "PAY_AMT4": 0.9291297793388367,
+    "PAY_AMT5": 0.7369130253791809,
+    "PAY_AMT6": 1.3110008239746094,
+    "SEX": 0.0775996744632721,
+    "EDUCATION": 1.4893033504486084,
+    "MARRIAGE": 0.21937373280525208
+   }
+  },
+  "immutable": [
+   "SEX",
+   "MARRIAGE"
+  ]
+ },
+ "oulad": {
+  "proximity_split": {
+   "unconstrained": {
+    "total": 10.233141899108887,
+    "continuous": 1.6838719844818115,
+    "categorical": 8.549269676208496,
+    "switches_per_person": 4.274634924530617
+   },
+   "baseline": {
+    "total": 6.822768688201904,
+    "continuous": 1.6115769147872925,
+    "categorical": 5.211191654205322,
+    "switches_per_person": 2.605595778623144
+   },
+   "reg_a": {
+    "total": 4.251787185668945,
+    "continuous": 1.6863186359405518,
+    "categorical": 2.5654680728912354,
+    "switches_per_person": 1.282734077800957
+   },
+   "reg_b": {
+    "total": 6.804718017578125,
+    "continuous": 1.6924337148666382,
+    "categorical": 5.112283706665039,
+    "switches_per_person": 2.5561418578966744
+   },
+   "ct_arm_c": {
+    "total": 5.1374853959021705,
+    "continuous": 4.62817136964128,
+    "categorical": 0.5093140262608908,
+    "switches_per_person": 0.2546570131304454
+   },
+   "model_approx": {
+    "total": 11.650179862976074,
+    "continuous": 0.4286307096481323,
+    "categorical": 11.221549034118652,
+    "switches_per_person": 5.610774328138422
+   }
+  },
+  "recourse_split": {
+   "unconstrained": {
+    "total": 10.363624572753906,
+    "continuous": 1.6363950967788696,
+    "categorical": 8.727229118347168,
+    "switches_per_person": 4.363614573346117
+   },
+   "baseline": {
+    "total": 7.096127033233643,
+    "continuous": 1.6387288570404053,
+    "categorical": 5.457397937774658,
+    "switches_per_person": 2.7286990103789526
+   },
+   "reg_a": {
+    "total": 4.30433464050293,
+    "continuous": 1.6325162649154663,
+    "categorical": 2.671818494796753,
+    "switches_per_person": 1.3359092006761653
+   },
+   "reg_b": {
+    "total": 6.795419216156006,
+    "continuous": 1.6407406330108643,
+    "categorical": 5.154678821563721,
+    "switches_per_person": 2.5773394274717347
+   },
+   "ct_arm_c": {
+    "total": 6.960322186802609,
+    "continuous": 5.962598287742737,
+    "categorical": 0.9977238990598714,
+    "switches_per_person": 0.4988619495299357
+   },
+   "model_approx": {
+    "total": 11.529666900634766,
+    "continuous": 0.23776203393936157,
+    "categorical": 11.29190444946289,
+    "switches_per_person": 5.645952223910986
+   }
+  },
+  "switch_rates": {
+   "baseline": {
+    "code_module": 0.7213154988342128,
+    "gender": 0.0,
+    "region": 0.0,
+    "highest_education": 0.5111056571358449,
+    "imd_band": 0.8591238188734814,
+    "age_band": 0.0,
+    "studied_credits": 0.5140508037796049,
+    "disability": 0.0
+   },
+   "reg_a": {
+    "code_module": 0.2704626334519573,
+    "gender": 0.0,
+    "region": 0.0,
+    "highest_education": 0.028715179776659713,
+    "imd_band": 0.8788808442753712,
+    "age_band": 0.0,
+    "studied_credits": 0.10467542029696895,
+    "disability": 0.0
+   },
+   "reg_b": {
+    "code_module": 0.6767701558473432,
+    "gender": 0.0,
+    "region": 0.0,
+    "highest_education": 0.5098785127009449,
+    "imd_band": 0.8844029942324212,
+    "age_band": 0.0,
+    "studied_credits": 0.48509019511596513,
+    "disability": 0.0
+   }
+  },
+  "recourse_switch_rates": {
+   "baseline": {
+    "code_module": 0.7595944967414917,
+    "gender": 0.0,
+    "region": 0.0,
+    "highest_education": 0.52039584841902,
+    "imd_band": 0.8723147477673183,
+    "age_band": 0.0,
+    "studied_credits": 0.5763939174511223,
+    "disability": 0.0
+   },
+   "reg_a": {
+    "code_module": 0.3103115189567737,
+    "gender": 0.0,
+    "region": 0.0,
+    "highest_education": 0.029461482733639216,
+    "imd_band": 0.8688722530789664,
+    "age_band": 0.0,
+    "studied_credits": 0.1272639459067858,
+    "disability": 0.0
+   },
+   "reg_b": {
+    "code_module": 0.6716382006254511,
+    "gender": 0.0,
+    "region": 0.0,
+    "highest_education": 0.5164782294924224,
+    "imd_band": 0.8722636516718788,
+    "age_band": 0.0,
+    "studied_credits": 0.5169593456819822,
+    "disability": 0.0
+   }
+  },
+  "sensitivity": {
+   "baseline": {
+    "num_of_prev_attempts": 0.06607603281736374,
+    "weight": 0.5504574179649353,
+    "weighted_score": 0.5041404366493225,
+    "forumng_click": 0.12481088936328888,
+    "homepage_click": 0.3391610383987427,
+    "oucontent_click": 0.4552624225616455,
+    "resource_click": 0.23698468506336212,
+    "subpage_click": 0.09283746778964996,
+    "url_click": 0.08838728815317154,
+    "dataplus_click": 0.5714496374130249,
+    "glossary_click": 0.7186604738235474,
+    "oucollaborate_click": 0.15855558216571808,
+    "quiz_click": 0.9766941070556641,
+    "ouelluminate_click": 0.08536691218614578,
+    "sharedsubpage_click": 0.10540387779474258,
+    "questionnaire_click": 0.13913610577583313,
+    "page_click": 0.446762353181839,
+    "externalquiz_click": 0.07286065071821213,
+    "ouwiki_click": 0.23618751764297485,
+    "dualpane_click": 0.09059862792491913,
+    "folder_click": 0.40056848526000977,
+    "repeatactivity_click": 0.49428078532218933,
+    "htmlactivity_click": 0.2573283910751343,
+    "code_module": 0.7712474465370178,
+    "gender": 0.13244681060314178,
+    "region": 0.5861835479736328,
+    "highest_education": 0.23984819650650024,
+    "imd_band": 0.5283705592155457,
+    "age_band": 0.1307051181793213,
+    "studied_credits": 4.217143535614014,
+    "disability": 0.1401309370994568
+   },
+   "reg_b": {
+    "num_of_prev_attempts": 0.049661099910736084,
+    "weight": 0.5252661108970642,
+    "weighted_score": 0.4579262137413025,
+    "forumng_click": 0.10422124713659286,
+    "homepage_click": 0.3941022753715515,
+    "oucontent_click": 0.5085350275039673,
+    "resource_click": 0.22757279872894287,
+    "subpage_click": 0.11715478450059891,
+    "url_click": 0.06461101025342941,
+    "dataplus_click": 0.5969720482826233,
+    "glossary_click": 0.6496780514717102,
+    "oucollaborate_click": 0.1238224059343338,
+    "quiz_click": 1.2784284353256226,
+    "ouelluminate_click": 0.10058707743883133,
+    "sharedsubpage_click": 0.09582464396953583,
+    "questionnaire_click": 0.1764608770608902,
+    "page_click": 0.401915043592453,
+    "externalquiz_click": 0.08705580979585648,
+    "ouwiki_click": 0.27125084400177,
+    "dualpane_click": 0.08355201035737991,
+    "folder_click": 0.43707019090652466,
+    "repeatactivity_click": 0.5168429613113403,
+    "htmlactivity_click": 0.1979113668203354,
+    "code_module": 0.8563792109489441,
+    "gender": 0.017603568732738495,
+    "region": 0.10784788429737091,
+    "highest_education": 0.337389200925827,
+    "imd_band": 0.568547785282135,
+    "age_band": 0.16976596415042877,
+    "studied_credits": 4.867829322814941,
+    "disability": 0.016733763739466667
+   }
+  },
+  "models": {
+   "unconstrained": "trained_models/table7_refs/oulad/oulad_base/params.pkl",
+   "baseline": "trained_models/table7_grid/oulad/feasibility_baseline/params.pkl",
+   "reg_a": "trained_models/table7_grid/oulad/oulad_predprox_after_k_1910_l4_5.0/params.pkl",
+   "reg_b": "trained_models/table7_grid/oulad/oulad_gradpen_after_k_1910_l4_1.0/params.pkl"
+  },
+  "sensitivity_sq": {
+   "baseline": {
+    "num_of_prev_attempts": 0.08913535624742508,
+    "weight": 5.660065650939941,
+    "weighted_score": 3.7572288513183594,
+    "forumng_click": 0.27788615226745605,
+    "homepage_click": 1.9790838956832886,
+    "oucontent_click": 3.7245185375213623,
+    "resource_click": 1.1729503870010376,
+    "subpage_click": 0.1596127599477768,
+    "url_click": 0.1377766877412796,
+    "dataplus_click": 5.283782482147217,
+    "glossary_click": 6.878635406494141,
+    "oucollaborate_click": 0.3901764452457428,
+    "quiz_click": 17.746049880981445,
+    "ouelluminate_click": 0.11934047192335129,
+    "sharedsubpage_click": 0.20542071759700775,
+    "questionnaire_click": 0.4362638592720032,
+    "page_click": 3.0376901626586914,
+    "externalquiz_click": 0.11920654773712158,
+    "ouwiki_click": 0.994094729423523,
+    "dualpane_click": 0.16422002017498016,
+    "folder_click": 3.3423686027526855,
+    "repeatactivity_click": 3.305525541305542,
+    "htmlactivity_click": 1.0759466886520386,
+    "code_module": 1.9378985166549683,
+    "gender": 0.14101862907409668,
+    "region": 0.5199305415153503,
+    "highest_education": 0.21348999440670013,
+    "imd_band": 0.4820331931114197,
+    "age_band": 0.10908395797014236,
+    "studied_credits": 6.25679349899292,
+    "disability": 0.1509009599685669
+   },
+   "reg_b": {
+    "num_of_prev_attempts": 0.029811538755893707,
+    "weight": 3.5299768447875977,
+    "weighted_score": 2.175463914871216,
+    "forumng_click": 0.1248268112540245,
+    "homepage_click": 2.021296262741089,
+    "oucontent_click": 4.177937030792236,
+    "resource_click": 0.7668691873550415,
+    "subpage_click": 0.1501728743314743,
+    "url_click": 0.06044165790081024,
+    "dataplus_click": 3.3632631301879883,
+    "glossary_click": 3.9077842235565186,
+    "oucollaborate_click": 0.14917099475860596,
+    "quiz_click": 24.321422576904297,
+    "ouelluminate_click": 0.12444578111171722,
+    "sharedsubpage_click": 0.10670396685600281,
+    "questionnaire_click": 0.3860425055027008,
+    "page_click": 1.555923342704773,
+    "externalquiz_click": 0.10580641776323318,
+    "ouwiki_click": 0.8439490795135498,
+    "dualpane_click": 0.07364590466022491,
+    "folder_click": 2.437035083770752,
+    "repeatactivity_click": 2.337082624435425,
+    "htmlactivity_click": 0.39303451776504517,
+    "code_module": 1.4166994094848633,
+    "gender": 0.001886351266875863,
+    "region": 0.01119033433496952,
+    "highest_education": 0.2562148869037628,
+    "imd_band": 0.34049341082572937,
+    "age_band": 0.09223795682191849,
+    "studied_credits": 5.3813276290893555,
+    "disability": 0.001700371503829956
+   }
+  },
+  "immutable": [
+   "gender",
+   "region",
+   "disability"
+  ]
+ }
+}

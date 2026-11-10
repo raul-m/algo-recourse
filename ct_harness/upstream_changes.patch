@@ -1,0 +1,61 @@
+diff --git a/paper/experiments/CTExperiments/src/model_and_data.jl b/paper/experiments/CTExperiments/src/model_and_data.jl
+index 89c85425..91c21f53 100644
+--- a/paper/experiments/CTExperiments/src/model_and_data.jl
++++ b/paper/experiments/CTExperiments/src/model_and_data.jl
+@@ -28,6 +28,7 @@ exceeds_max(d::Dataset) = ntotal(d) > nmax(d)
+ include("mnist.jl")
+ include("synthetic.jl")
+ include("tabular.jl")
++include("counternet_data.jl")
+ 
+ function get_rng(d::Dataset)
+     return Xoshiro(d.train_test_seed)
+@@ -52,6 +53,10 @@ const data_sets = Dict(
+     dname(Circles()) => Circles,
+     dname(Overlapping()) => Overlapping,
+     dname(Credit()) => Credit,
++    dname(CNAdult()) => CNAdult,
++    dname(CNCredit()) => CNCredit,
++    dname(CNCreditBalanced()) => CNCreditBalanced,
++    dname(CNOULAD()) => CNOULAD,
+ )
+ 
+ """
+diff --git a/paper/experiments/Manifest.toml b/paper/experiments/Manifest.toml
+index 136d24ad..74b1eea4 100644
+--- a/paper/experiments/Manifest.toml
++++ b/paper/experiments/Manifest.toml
+@@ -1,8 +1,8 @@
+ # This file is machine-generated - editing it directly is not advised
+ 
+-julia_version = "1.11.5"
++julia_version = "1.11.9"
+ manifest_format = "2.0"
+-project_hash = "3be75870bc3c1767488c713baf31982c51483170"
++project_hash = "e68b1811187069b6e108a3d8ac41ac7a179b73e9"
+ 
+ [[deps.AbstractFFTs]]
+ deps = ["LinearAlgebra"]
+@@ -1326,7 +1326,9 @@ version = "0.1.6"
+ 
+ [[deps.IntegratedGradients]]
+ deps = ["Distributions", "Flux", "LinearAlgebra", "Statistics", "Zygote"]
+-path = "../../../IntegratedGradients"
++git-tree-sha1 = "5890269b0c477d5e35978cde52e4af49eedf427b"
++repo-rev = "missing-dep"
++repo-url = "https://github.com/JuliaTrustworthyAI/IntegratedGradients.jl"
+ uuid = "03e9713a-fa7e-4938-b010-9648760faf04"
+ version = "0.1.0"
+ 
+diff --git a/paper/experiments/Project.toml b/paper/experiments/Project.toml
+index b34eb231..86c1405c 100644
+--- a/paper/experiments/Project.toml
++++ b/paper/experiments/Project.toml
+@@ -11,6 +11,7 @@ DotEnv = "4dc1fcf4-5e3b-5448-94ab-0c38ec0385c1"
+ GLMakie = "e9467ef8-e4e7-5192-8a1a-b1aee30e663a"
+ ImageInTerminal = "d8c32880-2388-543b-8c61-d9f865259254"
+ Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
++IntegratedGradients = "03e9713a-fa7e-4938-b010-9648760faf04"
+ JuliaFormatter = "98e50ef6-434e-11e9-1051-2b60c6c9e899"
+ Logging = "56ddb016-857b-54e1-b83d-db4d58db5568"
+ MPI = "da04e1cc-30fd-572f-bb4f-1f8673147195"
