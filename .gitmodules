@@ -1,3 +1,0 @@
-[submodule "assets"]
-	path = assets
-	url = https://huggingface.co/datasets/birkhoffg/ReLax-Assets
